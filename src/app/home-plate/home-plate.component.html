@@ -1,72 +1,112 @@
 <div class="main-content">
-        <!-- <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#home">Last 5</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu1">10</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">20</a>
-                </li>
-              </ul> -->
-            
-              <!-- Tab panes -->
-              <!-- <div class="tab-content">
-                <div id="home" class="container tab-pane active"><br>
-                  <h3>Last 5</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>NHL Points</h2>
+                        <p>Hottest player in their team's last games</p>       
+                        <ngb-tabset type="pills">
+                            <ngb-tab>
+                                <ng-template ngbTabTitle><b>Last 5</b></ng-template>
+                                <ng-template ngbTabContent>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let row of tableData1.dataRows">
+                                                    <td *ngFor="let cell of row">{{cell}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </ng-template>
+                            </ngb-tab>
+                            <ngb-tab>
+                                <ng-template ngbTabTitle><b>Last 10</b></ng-template>
+                                <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                                <p>Exercitation +1.</p>
+                                </ng-template>
+                            </ngb-tab>
+                            <ngb-tab [disabled]="false">
+                                <ng-template ngbTabTitle><b>Last 20</b></ng-template>
+                                <ng-template ngbTabContent>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let row of tableData1.dataRows">
+                                                    <td *ngFor="let cell of row">{{cell}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </ng-template>
+                            </ngb-tab>
+                        </ngb-tabset>
+                    </div>
                 </div>
-                <div id="menu1" class="container tab-pane fade"><br>
-                  <h3>10</h3>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>NBA Points</h2>
+                        <p>Hottest player in their team's last games</p>       
+                        <ngb-tabset>
+                            <ngb-tab title="Last 5">
+                                <ng-template ngbTabContent>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                        <thead>
+                                            <tr>
+                                            <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let row of tableData1.dataRows">
+                                                <td *ngFor="let cell of row">{{cell}}</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </ng-template>
+                            </ngb-tab>
+                            <ngb-tab>
+                                <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>
+                                <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                                    <p>Exercitation +1.</p>
+                                </ng-template>
+                            </ngb-tab>
+                            <ngb-tab title="Disabled" [disabled]="false">
+                                <ng-template ngbTabContent>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let row of tableData1.dataRows">
+                                                    <td *ngFor="let cell of row">{{cell}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </ng-template>
+                            </ngb-tab>
+                        </ngb-tabset>
+                    </div>
                 </div>
-                <div id="menu2" class="container tab-pane fade"><br>
-                  <h3>20</h3>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                </div>
-              </div> -->
-
-
-
-
-<!-- <div class="card">
-    <div class="header">
-        <h4 class="title">Tabs</h4>
-        <p class="category">Plain text tabs</p>
+            </div>
+        </div>
     </div>
-    <div class="content">
-
-        <ul role="tablist" class="nav nav-tabs">
-            <li role="presentation" class="active">
-                <a href="#agency" data-toggle="tab">Info</a>
-            </li>
-            <li>
-                <a href="#company" data-toggle="tab">Account</a>
-            </li>
-            <li>
-                <a href="#style" data-toggle="tab">Style</a>
-            </li>
-            <li>
-                <a href="#settings" data-toggle="tab">Settings</a>
-            </li>
-        </ul>
-
-        <div class="tab-content">
-            <div id="agency" class="tab-pane active">
-                Agency is a group of professional individuals looking to create amazing pieces of clothing. We have studied at the best schools of design, we have tailored the suits for the most stylish men in the industry, we are what you need!
-            </div>
-            <div id="company" class="tab-pane">
-                We are Houses Inc., a group of architects and interior designers based in Chicago and operating for clients worldwide. We’ve been designing stunningly beautiful houses and making clients happy for years.
-            </div>
-            <div id="style" class="tab-pane">
-               Explore a wide variety of styles, personalise your finishes, and let us design the perfect home for you. It's what we do best and you can see proof in the products and reviews below.
-            </div>
-            <div id="settings" class="tab-pane">
-                Explore a wide Houses Inc., a group of architects and interior designers based in Chicago and operating for clients worldwide. We’ve been designing stunningly beautiful houses and making clients happy for years.
-            </div>
-       </div>
-
-    </div>
-</div> -->
 </div>
